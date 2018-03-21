@@ -19,7 +19,7 @@ void initConfigs() {
 //===== Configuração inicial do Conversor ADC ==================================
     TRISA = 0b10111111;
     ADCON1 = 0b00001001;
-    ADCON2 = 0b10000110;
+    ADCON2 = 0b10000101;
 //===== Configuração inicial do Display LCD ====================================
     TRISB = 0b11000000;
     LCD_EN = 0;

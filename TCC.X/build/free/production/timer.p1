@@ -17,7 +17,9 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _TMR0L `Vuc ~T0 @X0 0 e@4054 ]
 "8151
 [v _TMR0H `Vuc ~T0 @X0 0 e@4055 ]
-"8067
+"14 adc.h
+[v _adc_read `(ui ~T0 @X0 0 ef1`uc ]
+"8067 C:\Program Files (x86)\Microchip\xc8\v1.45\include\pic18f4550.h
 [v _T0CON `Vuc ~T0 @X0 0 e@4053 ]
 [; ;htc.h: 26: extern const char __xc8_OPTIM_SPEED;
 [; ;htc.h: 28: extern double __fpnormalize(double);
@@ -3531,65 +3533,98 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;pic18.h: 168: extern __nonreentrant void _delay3(unsigned char);
 [; ;timer.h: 13: void tmr0_flag(void);
 [; ;timer.h: 14: void setTimer(char state);
-"10 timer.c
+[; ;adc.h: 14: unsigned int adc_read(char canal);
+"11 timer.c
 [v _tmr0_flag `(v ~T0 @X0 1 ef ]
 {
-[; ;timer.c: 10: void tmr0_flag(void) {
+[; ;timer.c: 11: void tmr0_flag(void) {
 [e :U _tmr0_flag ]
 [f ]
-[; ;timer.c: 11: INTCONbits.TMR0IF = 0;
-"11
-[e = . . _INTCONbits 0 2 -> -> 0 `i `uc ]
-[; ;timer.c: 12: TMR0L = 0xD2;
+[; ;timer.c: 12: INTCONbits.TMR0IF = 0;
 "12
-[e = _TMR0L -> -> 210 `i `uc ]
-[; ;timer.c: 13: TMR0H = 0x39;
+[e = . . _INTCONbits 0 2 -> -> 0 `i `uc ]
+[; ;timer.c: 13: TMR0L = 0xD2;
 "13
+[e = _TMR0L -> -> 210 `i `uc ]
+[; ;timer.c: 14: TMR0H = 0x39;
+"14
 [e = _TMR0H -> -> 57 `i `uc ]
-[; ;timer.c: 17: }
+"16
+[v _Vr `l ~T0 @X0 1 a ]
+[; ;timer.c: 16: long Vr = 0, Vs = 0, Vt = 0, Ir = 0, Is = 0, It = 0;
+[e = _Vr -> -> 0 `i `l ]
+[v _Vs `l ~T0 @X0 1 a ]
+[e = _Vs -> -> 0 `i `l ]
+[v _Vt `l ~T0 @X0 1 a ]
+[e = _Vt -> -> 0 `i `l ]
+[v _Ir `l ~T0 @X0 1 a ]
+[e = _Ir -> -> 0 `i `l ]
+[v _Is `l ~T0 @X0 1 a ]
+[e = _Is -> -> 0 `i `l ]
+[v _It `l ~T0 @X0 1 a ]
+[e = _It -> -> 0 `i `l ]
+[; ;timer.c: 17: Vr += (adc_read(0)*5*100) / 1023;
 "17
+[e =+ _Vr -> / * * ( _adc_read (1 -> -> 0 `i `uc -> -> 5 `i `ui -> -> 100 `i `ui -> -> 1023 `i `ui `l ]
+[; ;timer.c: 18: Vs += (adc_read(1)*5*100) / 1023;
+"18
+[e =+ _Vs -> / * * ( _adc_read (1 -> -> 1 `i `uc -> -> 5 `i `ui -> -> 100 `i `ui -> -> 1023 `i `ui `l ]
+[; ;timer.c: 19: Vt += (adc_read(2)*5*100) / 1023;
+"19
+[e =+ _Vt -> / * * ( _adc_read (1 -> -> 2 `i `uc -> -> 5 `i `ui -> -> 100 `i `ui -> -> 1023 `i `ui `l ]
+[; ;timer.c: 20: Ir += (adc_read(3)*5*100) / 1023;
+"20
+[e =+ _Ir -> / * * ( _adc_read (1 -> -> 3 `i `uc -> -> 5 `i `ui -> -> 100 `i `ui -> -> 1023 `i `ui `l ]
+[; ;timer.c: 21: Is += (adc_read(4)*5*100) / 1023;
+"21
+[e =+ _Is -> / * * ( _adc_read (1 -> -> 4 `i `uc -> -> 5 `i `ui -> -> 100 `i `ui -> -> 1023 `i `ui `l ]
+[; ;timer.c: 22: It += (adc_read(5)*5*100) / 1023;
+"22
+[e =+ _It -> / * * ( _adc_read (1 -> -> 5 `i `uc -> -> 5 `i `ui -> -> 100 `i `ui -> -> 1023 `i `ui `l ]
+[; ;timer.c: 25: }
+"25
 [e :UE 362 ]
 }
-"19
+"27
 [v _setTimer `(v ~T0 @X0 1 ef1`uc ]
 {
-[; ;timer.c: 19: void setTimer(char state) {
+[; ;timer.c: 27: void setTimer(char state) {
 [e :U _setTimer ]
 [v _state `uc ~T0 @X0 1 r1 ]
 [f ]
-[; ;timer.c: 20: if(state == 0) {
-"20
+[; ;timer.c: 28: if(state == 0) {
+"28
 [e $ ! == -> _state `i -> 0 `i 364  ]
 {
-[; ;timer.c: 21: T0CON = T0CON & 0b01111111;
-"21
+[; ;timer.c: 29: T0CON = T0CON & 0b01111111;
+"29
 [e = _T0CON -> & -> _T0CON `i -> 127 `i `uc ]
-[; ;timer.c: 22: TMR0L = 0;
-"22
+[; ;timer.c: 30: TMR0L = 0;
+"30
 [e = _TMR0L -> -> 0 `i `uc ]
-[; ;timer.c: 23: TMR0H = 0;
-"23
+[; ;timer.c: 31: TMR0H = 0;
+"31
 [e = _TMR0H -> -> 0 `i `uc ]
-"24
+"32
 }
-[; ;timer.c: 24: } else {
+[; ;timer.c: 32: } else {
 [e $U 365  ]
 [e :U 364 ]
 {
-[; ;timer.c: 25: TMR0L = 0xD2;
-"25
+[; ;timer.c: 33: TMR0L = 0xD2;
+"33
 [e = _TMR0L -> -> 210 `i `uc ]
-[; ;timer.c: 26: TMR0H = 0x39;
-"26
+[; ;timer.c: 34: TMR0H = 0x39;
+"34
 [e = _TMR0H -> -> 57 `i `uc ]
-[; ;timer.c: 27: T0CON = T0CON | 0b10000000;
-"27
+[; ;timer.c: 35: T0CON = T0CON | 0b10000000;
+"35
 [e = _T0CON -> | -> _T0CON `i -> 128 `i `uc ]
-"28
+"36
 }
 [e :U 365 ]
-[; ;timer.c: 28: }
-[; ;timer.c: 29: }
-"29
+[; ;timer.c: 36: }
+[; ;timer.c: 37: }
+"37
 [e :UE 363 ]
 }

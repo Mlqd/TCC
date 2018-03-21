@@ -4809,12 +4809,22 @@ extern __nonreentrant void _delay3(unsigned char);
 void tmr0_flag(void);
 void setTimer(char state);
 
-# 10 "timer.c"
+# 14 "adc.h"
+unsigned int adc_read(char canal);
+
+# 11 "timer.c"
 void tmr0_flag(void) {
 INTCONbits.TMR0IF = 0;
 TMR0L = 0xD2;
 TMR0H = 0x39;
 
+long Vr = 0, Vs = 0, Vt = 0, Ir = 0, Is = 0, It = 0;
+Vr += (adc_read(0)*5*100) / 1023;
+Vs += (adc_read(1)*5*100) / 1023;
+Vt += (adc_read(2)*5*100) / 1023;
+Ir += (adc_read(3)*5*100) / 1023;
+Is += (adc_read(4)*5*100) / 1023;
+It += (adc_read(5)*5*100) / 1023;
 
 
 }

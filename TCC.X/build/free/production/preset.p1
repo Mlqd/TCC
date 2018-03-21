@@ -3607,9 +3607,9 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;preset.c: 21: ADCON1 = 0b00001001;
 "21
 [e = _ADCON1 -> -> 9 `i `uc ]
-[; ;preset.c: 22: ADCON2 = 0b10000110;
+[; ;preset.c: 22: ADCON2 = 0b10000101;
 "22
-[e = _ADCON2 -> -> 134 `i `uc ]
+[e = _ADCON2 -> -> 133 `i `uc ]
 [; ;preset.c: 24: TRISB = 0b11000000;
 "24
 [e = _TRISB -> -> 192 `i `uc ]
