@@ -3,7 +3,7 @@
 [d edition pro ]
 [d chip 18F4550 ]
 [d frameptr 4065 ]
-"11 C:\Users\Thor\Desktop\TCC.X\adc.c
+"11 C:\Users\Thor\GitTCC\TCC\TCC.X\adc.c
 [v _adc_read adc_read `(ui  1 e 2 0 ]
 "8 C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\aldiv.c
 [v ___aldiv __aldiv `(l  1 e 4 0 ]
@@ -33,7 +33,7 @@
 [v ___flmul __flmul `(d  1 e 3 0 ]
 "15 C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\Umul32.c
 [v ___lmul __lmul `(ul  1 e 4 0 ]
-"11 C:\Users\Thor\Desktop\TCC.X\lcd.c
+"11 C:\Users\Thor\GitTCC\TCC\TCC.X\lcd.c
 [v _sendLcd sendLcd `(v  1 e 1 0 ]
 "16
 [v _writeLcd writeLcd `(v  1 e 1 0 ]
@@ -47,13 +47,13 @@
 [v _writeStringLcd writeStringLcd `(v  1 e 1 0 ]
 "53
 [v _writeValueLcd writeValueLcd `(v  1 e 1 0 ]
-"16 C:\Users\Thor\Desktop\TCC.X\main.c
+"16 C:\Users\Thor\GitTCC\TCC\TCC.X\main.c
 [v _main main `(v  1 e 1 0 ]
-"13 C:\Users\Thor\Desktop\TCC.X\preset.c
+"13 C:\Users\Thor\GitTCC\TCC\TCC.X\preset.c
 [v _initConfigs initConfigs `(v  1 e 1 0 ]
 "56
 [v _high_priority_interrupt high_priority_interrupt `II(v  1 e 1 0 ]
-"10 C:\Users\Thor\Desktop\TCC.X\timer.c
+"10 C:\Users\Thor\GitTCC\TCC\TCC.X\timer.c
 [v _tmr0_flag tmr0_flag `(v  1 e 1 0 ]
 "646 C:\Program Files (x86)\Microchip\xc8\v1.45\include\pic18f4550.h
 [v _UCON UCON `VEuc  1 e 1 @3949 ]
@@ -209,14 +209,14 @@
 ]
 [u S165 . 1 `S143 1 . 1 0 `S152 1 . 1 0 `S161 1 . 1 0 ]
 [v _INTCONbits INTCONbits `VES165  1 e 1 @4082 ]
-"16 C:\Users\Thor\Desktop\TCC.X\main.c
+"16 C:\Users\Thor\GitTCC\TCC\TCC.X\main.c
 [v _main main `(v  1 e 1 0 ]
 {
-"88
+"34
 [v main@valor valor `f  1 a 3 72 ]
-"134
+"81
 } 0
-"53 C:\Users\Thor\Desktop\TCC.X\lcd.c
+"53 C:\Users\Thor\GitTCC\TCC\TCC.X\lcd.c
 [v _writeValueLcd writeValueLcd `(v  1 e 1 0 ]
 {
 "55
@@ -285,7 +285,7 @@
 [v ___aldiv@divisor divisor `l  1 p 4 32 ]
 "42
 } 0
-"47 C:\Users\Thor\Desktop\TCC.X\lcd.c
+"47 C:\Users\Thor\GitTCC\TCC\TCC.X\lcd.c
 [v _writeStringLcd writeStringLcd `(v  1 e 1 0 ]
 {
 [v writeStringLcd@s s `*.25uc  1 p 2 20 ]
@@ -297,12 +297,12 @@
 [v writeCStringLcd@s s `*.25Cuc  1 p 2 20 ]
 "45
 } 0
-"13 C:\Users\Thor\Desktop\TCC.X\preset.c
+"13 C:\Users\Thor\GitTCC\TCC\TCC.X\preset.c
 [v _initConfigs initConfigs `(v  1 e 1 0 ]
 {
 "54
 } 0
-"25 C:\Users\Thor\Desktop\TCC.X\lcd.c
+"25 C:\Users\Thor\GitTCC\TCC\TCC.X\lcd.c
 [v _clearLcd clearLcd `(v  1 e 1 0 ]
 {
 "29
@@ -328,7 +328,7 @@
 {
 "14
 } 0
-"11 C:\Users\Thor\Desktop\TCC.X\adc.c
+"11 C:\Users\Thor\GitTCC\TCC\TCC.X\adc.c
 [v _adc_read adc_read `(ui  1 e 2 0 ]
 {
 [v adc_read@canal canal `uc  1 a 1 wreg ]
@@ -369,12 +369,12 @@
 [v ___ftpack@sign sign `uc  1 p 1 22 ]
 "86
 } 0
-"56 C:\Users\Thor\Desktop\TCC.X\preset.c
+"56 C:\Users\Thor\GitTCC\TCC\TCC.X\preset.c
 [v _high_priority_interrupt high_priority_interrupt `II(v  1 e 1 0 ]
 {
 "59
 } 0
-"10 C:\Users\Thor\Desktop\TCC.X\timer.c
+"10 C:\Users\Thor\GitTCC\TCC\TCC.X\timer.c
 [v _tmr0_flag tmr0_flag `(v  1 e 1 0 ]
 {
 "17

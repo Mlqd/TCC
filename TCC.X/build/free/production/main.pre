@@ -4901,8 +4901,6 @@ _delay((unsigned long)((1000)*((16000000)/4000.0)));
 _delay((unsigned long)((1000)*((16000000)/4000.0)));
 
 while(1) {
-
-# 85
 gotoLcd(0x80);
 writeCStringLcd("Teste Conv. ADC ");
 
@@ -4930,6 +4928,7 @@ writeStringLcd("Sinal It ");
 writeValueLcd(valor);
 writeStringLcd("V");
 _delay((unsigned long)((1000)*((16000000)/4000.0)));
+
 valor = ((float) (adc_read(3))*5) / 1023;
 gotoLcd(0xC0);
 writeStringLcd("Sinal Vr ");

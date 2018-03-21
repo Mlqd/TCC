@@ -27,61 +27,7 @@ void main() {
     __delay_ms(1000);        
     __delay_ms(1000);        
     
-    while(1) {
-        /*gotoLcd(0x80);
-        writeCStringLcd("Testando gatilhos...");
-        gotoLcd(0xC0);
-        writeCStringLcd("Banco 1         ");
-        setTrigger(0,1);
-        __delay_ms(1000);        
-        gotoLcd(0xC0);
-        writeCStringLcd("Banco 2         ");
-        setTrigger(0,0);
-        setTrigger(1,1);
-        __delay_ms(1000);
-        gotoLcd(0xC0);        
-        writeCStringLcd("Banco 3         ");
-        setTrigger(1,0);
-        setTrigger(2,1);
-        __delay_ms(1000);
-        gotoLcd(0xC0);
-        writeCStringLcd("Banco 4         ");
-        setTrigger(2,0);
-        setTrigger(3,1);
-        __delay_ms(1000);
-        gotoLcd(0xC0);
-        writeCStringLcd("Banco 5         ");
-        setTrigger(3,0);
-        setTrigger(4,1);
-        __delay_ms(1000);
-        gotoLcd(0xC0);
-        writeCStringLcd("Banco 6         ");
-        setTrigger(4,0);
-        setTrigger(5,1);
-        __delay_ms(1000);
-        gotoLcd(0xC0);
-        writeCStringLcd("Banco 7         ");
-        setTrigger(5,0);
-        setTrigger(6,1);
-        __delay_ms(1000);
-        gotoLcd(0xC0);
-        writeCStringLcd("Banco 8         ");
-        setTrigger(6,0);
-        setTrigger(7,1);                
-        __delay_ms(1000);
-        gotoLcd(0xC0);
-        writeCStringLcd("Banco 9         ");
-        setTrigger(7,0);
-        setTrigger(8,1);        
-        __delay_ms(1000);
-        gotoLcd(0xC0);
-        writeCStringLcd("Banco 10         ");
-        setTrigger(8,0);
-        setTrigger(9,1);
-        __delay_ms(500);
-        setTrigger(9,0);        
-        __delay_ms(1000);
-        for(int i=0;i<10;i++) setTrigger(i,1);*/
+    while(1) {        
         gotoLcd(0x80);
         writeCStringLcd("Teste Conv. ADC ");                
         
