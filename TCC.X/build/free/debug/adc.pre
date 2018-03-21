@@ -1,66 +1,5 @@
 
-# 1 "main.c"
-
-
-# 13 "pragmas.h"
-#pragma config PLLDIV = 4
-#pragma config CPUDIV = OSC1_PLL2
-
-
-
-#pragma config FOSC = HS
-
-
-
-
-#pragma config PWRT = ON
-
-
-
-
-
-#pragma config WDT = OFF
-
-
-# 36
-#pragma config MCLRE = ON
-
-
-#pragma config STVREN = ON
-#pragma config LVP = OFF
-#pragma config ICPRT = OFF
-#pragma config XINST = OFF
-#pragma config DEBUG = ON
-
-
-#pragma config CP0 = OFF
-#pragma config CP1 = OFF
-#pragma config CP2 = OFF
-#pragma config CP3 = OFF
-
-
-#pragma config CPB = OFF
-#pragma config CPD = OFF
-
-
-#pragma config WRT0 = OFF
-#pragma config WRT1 = OFF
-#pragma config WRT2 = OFF
-#pragma config WRT3 = OFF
-
-
-#pragma config WRTC = OFF
-#pragma config WRTB = OFF
-#pragma config WRTD = OFF
-
-
-#pragma config EBTR0 = OFF
-#pragma config EBTR1 = OFF
-#pragma config EBTR2 = OFF
-#pragma config EBTR3 = OFF
-
-
-#pragma config EBTRB = OFF
+# 1 "adc.c"
 
 # 26 "C:\Program Files (x86)\Microchip\xc8\v1.45\include\htc.h"
 extern const char __xc8_OPTIM_SPEED;
@@ -4866,89 +4805,16 @@ extern __nonreentrant void _delaywdt(unsigned long);
 #pragma intrinsic(_delay3)
 extern __nonreentrant void _delay3(unsigned char);
 
-# 14 "lcd.h"
-void writeLcd(char c);
-void clearLcd(void);
-void gotoLcd(unsigned char pos);
-
-void writeCStringLcd(const char * s);
-void writeStringLcd(char * s);
-void sendLcd(void);
-void writeValueLcd(float val);
-
-# 14 "preset.h"
-void initConfigs();
-
-# 14 "triggers.h"
-void setTrigger(char trigger_id, char action);
-
 # 14 "adc.h"
 unsigned int adc_read(char canal);
 
-# 13 "timer.h"
-void tmr0_flag(void);
-void setTimer(char state);
-
-# 17 "main.c"
-void main() {
-_delay((unsigned long)((1000)*((16000000)/4000.0)));
-_delay((unsigned long)((1000)*((16000000)/4000.0)));
-_delay((unsigned long)((1000)*((16000000)/4000.0)));
-initConfigs();
-_delay((unsigned long)((1000)*((16000000)/4000.0)));
-_delay((unsigned long)((1000)*((16000000)/4000.0)));
-clearLcd();
-setTimer(1);
-
-while(1) {
-gotoLcd(0x80);
-writeCStringLcd("Teste Conv. ADC ");
-
-float valor;
-unsigned char str[7];
-unsigned char val[2];
-
-valor = ((float) (adc_read(0))*5) / 1023;
-gotoLcd(0xC0);
-writeStringLcd("Sinal Ir ");
-writeValueLcd(valor);
-writeStringLcd("V");
-_delay((unsigned long)((1000)*((16000000)/4000.0)));
-
-valor = ((float) (adc_read(1))*5) / 1023;
-gotoLcd(0xC0);
-writeStringLcd("Sinal Is ");
-writeValueLcd(valor);
-writeStringLcd("V");
-_delay((unsigned long)((1000)*((16000000)/4000.0)));
-
-valor = ((float) (adc_read(2))*5) / 1023;
-gotoLcd(0xC0);
-writeStringLcd("Sinal It ");
-writeValueLcd(valor);
-writeStringLcd("V");
-_delay((unsigned long)((1000)*((16000000)/4000.0)));
-
-valor = ((float) (adc_read(3))*5) / 1023;
-gotoLcd(0xC0);
-writeStringLcd("Sinal Vr ");
-writeValueLcd(valor);
-writeStringLcd("V");
-_delay((unsigned long)((1000)*((16000000)/4000.0)));
-
-valor = ((float) (adc_read(4))*5) / 1023;
-gotoLcd(0xC0);
-writeStringLcd("Sinal Vs ");
-writeValueLcd(valor);
-writeStringLcd("V");
-_delay((unsigned long)((1000)*((16000000)/4000.0)));
-
-valor = ((float) (adc_read(5))*5) / 1023;
-gotoLcd(0xC0);
-writeStringLcd("Sinal Vt ");
-writeValueLcd(valor);
-writeStringLcd("V");
-_delay((unsigned long)((1000)*((16000000)/4000.0)));
-
-}
+# 11 "adc.c"
+unsigned int adc_read(char canal) {
+unsigned char x, y;
+ADCON0 = (unsigned char)((canal << 2) | 0x01);
+ADCON0bits.GO_DONE = 1;
+while (ADCON0bits.GO_DONE);
+x = (unsigned char)(ADRESH & 0x03);
+y = ADRESL;
+return (unsigned int) (x << 8 | y);
 }

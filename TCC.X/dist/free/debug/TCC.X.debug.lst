@@ -1,7 +1,7 @@
 
 
 Microchip Technology PIC18 LITE Macro Assembler V1.45 build -152302408 
-                                                                                               Wed Mar 21 12:20:07 2018
+                                                                                               Wed Mar 21 12:20:50 2018
 
 Microchip Technology Omniscient Code Generator v1.45 (Free mode) build 201711160504
      1                           	processor	18F4550
@@ -3957,7 +3957,7 @@ Microchip Technology Omniscient Code Generator v1.45 (Free mode) build 201711160
   3943  00124E  6ED7               	movwf	4055,c	;volatile
   3944                           
   3945                           ;timer.c: 16: int Vr[30], Vs[30], Vt[30], Ir[30], Is[30], It[30];
-  3946                           ;timer.c: 17: for(int i=0;i<10;i++) {
+  3946                           ;timer.c: 17: for(int i=0;i<30;i++) {
   3947  001250  0E00               	movlw	0
   3948  001252  6E45               	movwf	tmr0_flag@i+1,c
   3949  001254  0E00               	movlw	0
@@ -3967,7 +3967,7 @@ Microchip Technology Omniscient Code Generator v1.45 (Free mode) build 201711160
   3953  00125A  D006               	goto	i2l155
   3954  00125C  5045               	movf	tmr0_flag@i+1,w,c
   3955  00125E  E167               	bnz	i2l157
-  3956  001260  0E0A               	movlw	10
+  3956  001260  0E1E               	movlw	30
   3957  001262  5C44               	subwf	tmr0_flag@i,w,c
   3958  001264  B0D8               	btfsc	status,0,c
   3959  001266  0012               	return	
@@ -4583,7 +4583,7 @@ SFR                  0      0       0     200        0.0%
 
 
 Microchip Technology PIC18 Macro Assembler V1.45 build -152302408 
-Symbol Table                                                                                   Wed Mar 21 12:20:07 2018
+Symbol Table                                                                                   Wed Mar 21 12:20:50 2018
 
                   writeValueLcd@x 0230                                l23 08E2  
                 writeValueLcd@val 0229                      __CFG_CP0$OFF 000000  

@@ -1,83 +1,65 @@
 Version 3.2 HI-TECH Software Intermediate Code
-[p mainexit ]
+"646 C:\Program Files (x86)\Microchip\xc8\v1.45\include\pic18f4550.h
+[v _UCON `Vuc ~T0 @X0 0 e@3949 ]
+"5585
+[v _CMCON `Vuc ~T0 @X0 0 e@4020 ]
+"3845
+[v _TRISC `Vuc ~T0 @X0 0 e@3988 ]
+"3999
+[v _TRISD `Vuc ~T0 @X0 0 e@3989 ]
+"4221
+[v _TRISE `Vuc ~T0 @X0 0 e@3990 ]
+"3425
+[v _TRISA `Vuc ~T0 @X0 0 e@3986 ]
+"6579
+[v _ADCON1 `Vuc ~T0 @X0 0 e@4033 ]
+"6508
+[v _ADCON2 `Vuc ~T0 @X0 0 e@4032 ]
+"3623
+[v _TRISB `Vuc ~T0 @X0 0 e@3987 ]
+"3077
+[s S125 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S125 . LATB0 LATB1 LATB2 LATB3 LATB4 LATB5 LATB6 LATB7 ]
+"3087
+[s S126 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S126 . LB0 LB1 LB2 LB3 LB4 LB5 LB6 LB7 ]
+"3076
+[u S124 `S125 1 `S126 1 ]
+[n S124 . . . ]
+"3098
+[v _LATBbits `VS124 ~T0 @X0 0 e@3978 ]
 [v F3783 `(v ~T0 @X0 1 tf1`ul ]
 "164 C:\Program Files (x86)\Microchip\xc8\v1.45\include\pic18.h
 [v __delay `JF3783 ~T0 @X0 0 e ]
 [p i __delay ]
-"14 preset.h
-[v _initConfigs `(v ~T0 @X0 0 ef ]
-"15 lcd.h
+"14 lcd.h
+[v _writeLcd `(v ~T0 @X0 0 ef1`uc ]
+"15
 [v _clearLcd `(v ~T0 @X0 0 ef ]
-"14 timer.h
-[v _setTimer `(v ~T0 @X0 0 ef1`uc ]
-"16 lcd.h
-[v _gotoLcd `(v ~T0 @X0 0 ef1`uc ]
-"18
-[v _writeCStringLcd `(v ~T0 @X0 0 ef1`*Cuc ]
-"14 adc.h
-[v _adc_read `(ui ~T0 @X0 0 ef1`uc ]
-"19 lcd.h
-[v _writeStringLcd `(v ~T0 @X0 0 ef1`*uc ]
-"21
-[v _writeValueLcd `(v ~T0 @X0 0 ef1`f ]
-"13 pragmas.h
-[p x PLLDIV=4 ]
-"14
-[p x CPUDIV=OSC1_PLL2 ]
-"18
-[p x FOSC=HS ]
-"23
-[p x PWRT=ON ]
-"29
-[p x WDT=OFF ]
-"36
-[p x MCLRE=ON ]
-"39
-[p x STVREN=ON ]
-"40
-[p x LVP=OFF ]
-"41
-[p x ICPRT=OFF ]
-"42
-[p x XINST=OFF ]
-"43
-[p x DEBUG=ON ]
-"46
-[p x CP0=OFF ]
-"47
-[p x CP1=OFF ]
-"48
-[p x CP2=OFF ]
-"49
-[p x CP3=OFF ]
-"52
-[p x CPB=OFF ]
-"53
-[p x CPD=OFF ]
-"56
-[p x WRT0=OFF ]
-"57
-[p x WRT1=OFF ]
-"58
-[p x WRT2=OFF ]
-"59
-[p x WRT3=OFF ]
-"62
-[p x WRTC=OFF ]
-"63
-[p x WRTB=OFF ]
-"64
-[p x WRTD=OFF ]
-"67
-[p x EBTR0=OFF ]
-"68
-[p x EBTR1=OFF ]
-"69
-[p x EBTR2=OFF ]
-"70
-[p x EBTR3=OFF ]
-"73
-[p x EBTRB=OFF ]
+"8067 C:\Program Files (x86)\Microchip\xc8\v1.45\include\pic18f4550.h
+[v _T0CON `Vuc ~T0 @X0 0 e@4053 ]
+"8580
+[v _INTCON `Vuc ~T0 @X0 0 e@4082 ]
+"3261
+[v _LATD `Vuc ~T0 @X0 0 e@3980 ]
+"3183
+[v _LATC `Vuc ~T0 @X0 0 e@3979 ]
+"8586
+[s S355 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S355 . RBIF INT0IF TMR0IF RBIE INT0IE TMR0IE PEIE_GIEL GIE_GIEH ]
+"8596
+[s S356 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S356 . . INT0F T0IF . INT0E T0IE PEIE GIE ]
+"8606
+[s S357 :6 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S357 . . GIEL GIEH ]
+"8585
+[u S354 `S355 1 `S356 1 `S357 1 ]
+[n S354 . . . . ]
+"8612
+[v _INTCONbits `VS354 ~T0 @X0 0 e@4082 ]
+"13 timer.h
+[v _tmr0_flag `(v ~T0 @X0 0 ef ]
 [; ;htc.h: 26: extern const char __xc8_OPTIM_SPEED;
 [; ;htc.h: 28: extern double __fpnormalize(double);
 [; ;xc8debug.h: 14: extern void __builtin_software_breakpoint(void);
@@ -3588,6 +3570,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;pic18.h: 164: extern __nonreentrant void _delay(unsigned long);
 [; ;pic18.h: 166: extern __nonreentrant void _delaywdt(unsigned long);
 [; ;pic18.h: 168: extern __nonreentrant void _delay3(unsigned char);
+[; ;preset.h: 14: void initConfigs();
 [; ;lcd.h: 14: void writeLcd(char c);
 [; ;lcd.h: 15: void clearLcd(void);
 [; ;lcd.h: 16: void gotoLcd(unsigned char pos);
@@ -3595,190 +3578,106 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;lcd.h: 19: void writeStringLcd(char * s);
 [; ;lcd.h: 20: void sendLcd(void);
 [; ;lcd.h: 21: void writeValueLcd(float val);
-[; ;preset.h: 14: void initConfigs();
-[; ;triggers.h: 14: void setTrigger(char trigger_id, char action);
-[; ;adc.h: 14: unsigned int adc_read(char canal);
 [; ;timer.h: 13: void tmr0_flag(void);
 [; ;timer.h: 14: void setTimer(char state);
-[v $root$_main `(v ~T0 @X0 0 e ]
-"17 main.c
-[v _main `(v ~T0 @X0 1 ef ]
+"13 preset.c
+[v _initConfigs `(v ~T0 @X0 1 ef ]
 {
-[; ;main.c: 17: void main() {
-[e :U _main ]
+[; ;preset.c: 13: void initConfigs() {
+[e :U _initConfigs ]
 [f ]
-[; ;main.c: 18: _delay((unsigned long)((1000)*((16000000)/4000.0)));
+[; ;preset.c: 14: UCON<3>=0;
+"14
+[e >= -> < -> _UCON `i -> 3 `i `i -> 0 `i ]
+[; ;preset.c: 15: CMCON = 0b00000111;
+"15
+[e = _CMCON -> -> 7 `i `uc ]
+[; ;preset.c: 16: TRISC = 0b11111000;
+"16
+[e = _TRISC -> -> 248 `i `uc ]
+[; ;preset.c: 17: TRISD = 0b00000001;
+"17
+[e = _TRISD -> -> 1 `i `uc ]
+[; ;preset.c: 18: TRISE = 0b1111;
 "18
-[e ( __delay (1 -> * -> -> 1000 `i `d / -> -> 16000000 `l `d .4000.0 `ul ]
-[; ;main.c: 19: _delay((unsigned long)((1000)*((16000000)/4000.0)));
-"19
-[e ( __delay (1 -> * -> -> 1000 `i `d / -> -> 16000000 `l `d .4000.0 `ul ]
-[; ;main.c: 20: _delay((unsigned long)((1000)*((16000000)/4000.0)));
+[e = _TRISE -> -> 15 `i `uc ]
+[; ;preset.c: 20: TRISA = 0b10111111;
 "20
-[e ( __delay (1 -> * -> -> 1000 `i `d / -> -> 16000000 `l `d .4000.0 `ul ]
-[; ;main.c: 21: initConfigs();
+[e = _TRISA -> -> 191 `i `uc ]
+[; ;preset.c: 21: ADCON1 = 0b00001001;
 "21
-[e ( _initConfigs ..  ]
-[; ;main.c: 22: _delay((unsigned long)((1000)*((16000000)/4000.0)));
+[e = _ADCON1 -> -> 9 `i `uc ]
+[; ;preset.c: 22: ADCON2 = 0b10000101;
 "22
-[e ( __delay (1 -> * -> -> 1000 `i `d / -> -> 16000000 `l `d .4000.0 `ul ]
-[; ;main.c: 23: _delay((unsigned long)((1000)*((16000000)/4000.0)));
-"23
-[e ( __delay (1 -> * -> -> 1000 `i `d / -> -> 16000000 `l `d .4000.0 `ul ]
-[; ;main.c: 24: clearLcd();
+[e = _ADCON2 -> -> 133 `i `uc ]
+[; ;preset.c: 24: TRISB = 0b11000000;
 "24
-[e ( _clearLcd ..  ]
-[; ;main.c: 25: setTimer(1);
+[e = _TRISB -> -> 192 `i `uc ]
+[; ;preset.c: 25: LATBbits.LATB5 = 0;
 "25
-[e ( _setTimer (1 -> -> 1 `i `uc ]
-[; ;main.c: 27: while(1) {
+[e = . . _LATBbits 0 5 -> -> 0 `i `uc ]
+[; ;preset.c: 26: LATBbits.LATB4 = 0;
+"26
+[e = . . _LATBbits 0 4 -> -> 0 `i `uc ]
+[; ;preset.c: 27: _delay((unsigned long)((50)*((16000000)/4000.0)));
 "27
-[e :U 364 ]
-{
-[; ;main.c: 28: gotoLcd(0x80);
+[e ( __delay (1 -> * -> -> 50 `i `d / -> -> 16000000 `l `d .4000.0 `ul ]
+[; ;preset.c: 28: writeLcd(0x02);
 "28
-[e ( _gotoLcd (1 -> -> 128 `i `uc ]
-[; ;main.c: 29: writeCStringLcd("Teste Conv. ADC ");
+[e ( _writeLcd (1 -> -> 2 `i `uc ]
+[; ;preset.c: 29: _delay((unsigned long)((5)*((16000000)/4000.0)));
 "29
-[e ( _writeCStringLcd (1 :s 1C ]
+[e ( __delay (1 -> * -> -> 5 `i `d / -> -> 16000000 `l `d .4000.0 `ul ]
+[; ;preset.c: 30: writeLcd(0x28);
+"30
+[e ( _writeLcd (1 -> -> 40 `i `uc ]
+[; ;preset.c: 31: writeLcd(0x01);
 "31
-[v _valor `f ~T0 @X0 1 a ]
+[e ( _writeLcd (1 -> -> 1 `i `uc ]
+[; ;preset.c: 32: writeLcd(0x0c);
 "32
-[v _str `uc ~T0 @X0 -> 7 `i a ]
+[e ( _writeLcd (1 -> -> 12 `i `uc ]
+[; ;preset.c: 33: writeLcd(0x06);
 "33
-[v _val `uc ~T0 @X0 -> 2 `i a ]
-[; ;main.c: 31: float valor;
-[; ;main.c: 32: unsigned char str[7];
-[; ;main.c: 33: unsigned char val[2];
-[; ;main.c: 35: valor = ((float) (adc_read(0))*5) / 1023;
+[e ( _writeLcd (1 -> -> 6 `i `uc ]
+[; ;preset.c: 34: clearLcd();
+"34
+[e ( _clearLcd ..  ]
+[; ;preset.c: 35: writeLcd(0x0C);
 "35
-[e = _valor / * -> ( _adc_read (1 -> -> 0 `i `uc `f -> -> 5 `i `f -> -> 1023 `i `f ]
-[; ;main.c: 36: gotoLcd(0xC0);
-"36
-[e ( _gotoLcd (1 -> -> 192 `i `uc ]
-[; ;main.c: 37: writeStringLcd("Sinal Ir ");
+[e ( _writeLcd (1 -> -> 12 `i `uc ]
+[; ;preset.c: 37: T0CON = 0b00000111;
 "37
-[e ( _writeStringLcd (1 -> :s 2C `*uc ]
-[; ;main.c: 38: writeValueLcd(valor);
+[e = _T0CON -> -> 7 `i `uc ]
+[; ;preset.c: 38: INTCON = 0b11100000;
 "38
-[e ( _writeValueLcd (1 _valor ]
-[; ;main.c: 39: writeStringLcd("V");
-"39
-[e ( _writeStringLcd (1 -> :s 3C `*uc ]
-[; ;main.c: 40: _delay((unsigned long)((1000)*((16000000)/4000.0)));
-"40
-[e ( __delay (1 -> * -> -> 1000 `i `d / -> -> 16000000 `l `d .4000.0 `ul ]
-[; ;main.c: 42: valor = ((float) (adc_read(1))*5) / 1023;
-"42
-[e = _valor / * -> ( _adc_read (1 -> -> 1 `i `uc `f -> -> 5 `i `f -> -> 1023 `i `f ]
-[; ;main.c: 43: gotoLcd(0xC0);
-"43
-[e ( _gotoLcd (1 -> -> 192 `i `uc ]
-[; ;main.c: 44: writeStringLcd("Sinal Is ");
-"44
-[e ( _writeStringLcd (1 -> :s 4C `*uc ]
-[; ;main.c: 45: writeValueLcd(valor);
-"45
-[e ( _writeValueLcd (1 _valor ]
-[; ;main.c: 46: writeStringLcd("V");
-"46
-[e ( _writeStringLcd (1 -> :s 5C `*uc ]
-[; ;main.c: 47: _delay((unsigned long)((1000)*((16000000)/4000.0)));
-"47
-[e ( __delay (1 -> * -> -> 1000 `i `d / -> -> 16000000 `l `d .4000.0 `ul ]
-[; ;main.c: 49: valor = ((float) (adc_read(2))*5) / 1023;
-"49
-[e = _valor / * -> ( _adc_read (1 -> -> 2 `i `uc `f -> -> 5 `i `f -> -> 1023 `i `f ]
-[; ;main.c: 50: gotoLcd(0xC0);
-"50
-[e ( _gotoLcd (1 -> -> 192 `i `uc ]
-[; ;main.c: 51: writeStringLcd("Sinal It ");
+[e = _INTCON -> -> 224 `i `uc ]
+[; ;preset.c: 51: LATD = LATD & 0b00000001;
 "51
-[e ( _writeStringLcd (1 -> :s 6C `*uc ]
-[; ;main.c: 52: writeValueLcd(valor);
+[e = _LATD -> & -> _LATD `i -> 1 `i `uc ]
+[; ;preset.c: 52: LATC = LATC & 0b11111000;
 "52
-[e ( _writeValueLcd (1 _valor ]
-[; ;main.c: 53: writeStringLcd("V");
-"53
-[e ( _writeStringLcd (1 -> :s 7C `*uc ]
-[; ;main.c: 54: _delay((unsigned long)((1000)*((16000000)/4000.0)));
+[e = _LATC -> & -> _LATC `i -> 248 `i `uc ]
+[; ;preset.c: 54: }
 "54
-[e ( __delay (1 -> * -> -> 1000 `i `d / -> -> 16000000 `l `d .4000.0 `ul ]
-[; ;main.c: 56: valor = ((float) (adc_read(3))*5) / 1023;
-"56
-[e = _valor / * -> ( _adc_read (1 -> -> 3 `i `uc `f -> -> 5 `i `f -> -> 1023 `i `f ]
-[; ;main.c: 57: gotoLcd(0xC0);
-"57
-[e ( _gotoLcd (1 -> -> 192 `i `uc ]
-[; ;main.c: 58: writeStringLcd("Sinal Vr ");
-"58
-[e ( _writeStringLcd (1 -> :s 8C `*uc ]
-[; ;main.c: 59: writeValueLcd(valor);
-"59
-[e ( _writeValueLcd (1 _valor ]
-[; ;main.c: 60: writeStringLcd("V");
-"60
-[e ( _writeStringLcd (1 -> :s 9C `*uc ]
-[; ;main.c: 61: _delay((unsigned long)((1000)*((16000000)/4000.0)));
-"61
-[e ( __delay (1 -> * -> -> 1000 `i `d / -> -> 16000000 `l `d .4000.0 `ul ]
-[; ;main.c: 63: valor = ((float) (adc_read(4))*5) / 1023;
-"63
-[e = _valor / * -> ( _adc_read (1 -> -> 4 `i `uc `f -> -> 5 `i `f -> -> 1023 `i `f ]
-[; ;main.c: 64: gotoLcd(0xC0);
-"64
-[e ( _gotoLcd (1 -> -> 192 `i `uc ]
-[; ;main.c: 65: writeStringLcd("Sinal Vs ");
-"65
-[e ( _writeStringLcd (1 -> :s 10C `*uc ]
-[; ;main.c: 66: writeValueLcd(valor);
-"66
-[e ( _writeValueLcd (1 _valor ]
-[; ;main.c: 67: writeStringLcd("V");
-"67
-[e ( _writeStringLcd (1 -> :s 11C `*uc ]
-[; ;main.c: 68: _delay((unsigned long)((1000)*((16000000)/4000.0)));
-"68
-[e ( __delay (1 -> * -> -> 1000 `i `d / -> -> 16000000 `l `d .4000.0 `ul ]
-[; ;main.c: 70: valor = ((float) (adc_read(5))*5) / 1023;
-"70
-[e = _valor / * -> ( _adc_read (1 -> -> 5 `i `uc `f -> -> 5 `i `f -> -> 1023 `i `f ]
-[; ;main.c: 71: gotoLcd(0xC0);
-"71
-[e ( _gotoLcd (1 -> -> 192 `i `uc ]
-[; ;main.c: 72: writeStringLcd("Sinal Vt ");
-"72
-[e ( _writeStringLcd (1 -> :s 12C `*uc ]
-[; ;main.c: 73: writeValueLcd(valor);
-"73
-[e ( _writeValueLcd (1 _valor ]
-[; ;main.c: 74: writeStringLcd("V");
-"74
-[e ( _writeStringLcd (1 -> :s 13C `*uc ]
-[; ;main.c: 75: _delay((unsigned long)((1000)*((16000000)/4000.0)));
-"75
-[e ( __delay (1 -> * -> -> 1000 `i `d / -> -> 16000000 `l `d .4000.0 `ul ]
-"77
-}
-[e :U 363 ]
-"27
-[e $U 364  ]
-[e :U 365 ]
-[; ;main.c: 77: }
-[; ;main.c: 78: }
-"78
 [e :UE 362 ]
 }
-[a 3C 86 0 ]
-[a 5C 86 0 ]
-[a 7C 86 0 ]
-[a 9C 86 0 ]
-[a 11C 86 0 ]
-[a 13C 86 0 ]
-[a 12C 83 105 110 97 108 32 86 116 32 0 ]
-[a 6C 83 105 110 97 108 32 73 116 32 0 ]
-[a 10C 83 105 110 97 108 32 86 115 32 0 ]
-[a 4C 83 105 110 97 108 32 73 115 32 0 ]
-[a 8C 83 105 110 97 108 32 86 114 32 0 ]
-[a 2C 83 105 110 97 108 32 73 114 32 0 ]
-[a 1C 84 101 115 116 101 32 67 111 110 118 46 32 65 68 67 32 0 ]
+[v $root$_high_priority_interrupt `(v ~T0 @X0 0 e ]
+[v F3813 `(v ~T0 @X0 1 tf ]
+"56
+[v _high_priority_interrupt `IF3813 ~T0 @X0 1 e ]
+{
+[; ;preset.c: 56: void interrupt high_priority_interrupt(void) {
+[e :U _high_priority_interrupt ]
+[f ]
+[; ;preset.c: 57: if (INTCONbits.TMR0IF)
+"57
+[e $ ! != -> . . _INTCONbits 0 2 `i -> -> -> 0 `i `Vuc `i 364  ]
+[; ;preset.c: 58: tmr0_flag();
+"58
+[e ( _tmr0_flag ..  ]
+[e :U 364 ]
+[; ;preset.c: 59: }
+"59
+[e :UE 363 ]
+}

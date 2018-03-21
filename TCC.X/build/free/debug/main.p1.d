@@ -1,5 +1,5 @@
- build/free/production/main.d  \
- build/free/production/main.p1:  \
+ build/free/debug/main.d  \
+ build/free/debug/main.p1:  \
  main.c  \
 timer.h  \
 preset.h  \

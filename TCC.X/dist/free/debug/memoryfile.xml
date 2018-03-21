@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project>
-  <executable name="dist/free/production\TCC.X.production.hex">
+  <executable name="dist/free/debug\TCC.X.debug.hex">
     <memory name="program">
       <units>bytes</units>
       <length>32768</length>

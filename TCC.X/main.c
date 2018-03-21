@@ -12,6 +12,7 @@
 #include "triggers.h"
 #include "adc.h"
 #include "preset.h"
+#include "timer.h"
 
 void main() {
     __delay_ms(1000);        
@@ -21,11 +22,7 @@ void main() {
     __delay_ms(1000);
     __delay_ms(1000);    
     clearLcd();
-    gotoLcd(0x80);
-    writeCStringLcd("Nr: ");
-    writeValueLcd(0.92);                
-    __delay_ms(1000);        
-    __delay_ms(1000);        
+    setTimer(1);
     
     while(1) {        
         gotoLcd(0x80);

@@ -413,9 +413,9 @@ cstackBANK1 100 1B3 BANK1 100 1
 cstackBANK2 200 238 BANK2 200 1
 text0 852 1975 CODE 852 0
 %locals
-dist/free/production\TCC.X.production.obj
+dist/free/debug\TCC.X.debug.obj
 C:\Program Files (x86)\Microchip\xc8\v1.45\include\pic18f4550.h
-C:\Users\Thor\AppData\Local\Temp\s3hk.
+C:\Users\Thor\AppData\Local\Temp\s3gs.
 2333 1962 0 CODE 0
 2335 1962 0 CODE 0
 2338 1962 0 CODE 0
